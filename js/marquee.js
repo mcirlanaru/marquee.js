@@ -96,6 +96,7 @@ var Marquee = {
             // Correctly calculate the width of the marquee
             var visibleWidth = self._headerWrapper.clientWidth + 'px';
             titleText.style.transform = 'translateX(' + visibleWidth + ')';
+            titleText.style.webkitTransform = 'translateX(' + visibleWidth + ')';
             // Enable the continuous marquee
             titleText.classList.add(cssClass);
             self._marqueeCssClassList.push(cssClass);
