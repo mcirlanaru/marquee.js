@@ -92,13 +92,13 @@ var Marquee = {
           var self = this;
           titleText.addEventListener('animationend', function() {
             titleText.classList.remove(cssClass + '-start-' + timing);
-            this._marqueeCssClassList.pop();
+            self._marqueeCssClassList.pop();
             // Correctly calculate the width of the marquee
             var visibleWidth = self._headerWrapper.clientWidth + 'px';
             titleText.style.transform = 'translateX(' + visibleWidth + ')';
             // Enable the continuous marquee
             titleText.classList.add(cssClass);
-            this._marqueeCssClassList.push(cssClass);
+            self._marqueeCssClassList.push(cssClass);
           });
           break;
         case 'alternate':
