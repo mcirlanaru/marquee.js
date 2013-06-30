@@ -6,6 +6,8 @@
  *   parameters provided to the `activate' method
  * - start aligned left with delay (see marquee.css for details on classes)
  *
+ * @author: Mihai Cîrlănaru
+ *
  * Creates a HTML element of the form:
  *  <headerNode>
  *    <div id="marquee-h-wrapper">

@@ -1,3 +1,8 @@
+/**
+ * MarqueeJS: lightweight JS+CSS marquee
+ * @author: Mihai Cîrlănaru
+*/
+
 #marquee-h-wrapper {
   position: absolute;
   overflow: hidden;
