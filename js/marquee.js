@@ -126,5 +126,18 @@ var Marquee = {
 
       titleText.style.transform = '';
     }
+  },
+
+  /**
+   * Deactivate the marquee (i.e. stop the animation)
+   */
+  deactivate: function marquee_deactivate() {
+    if (!this._headerNode || !this._headerWrapper)
+      return;
+
+    var titleText = document.getElementById('marquee-h-text');
+    // Clear any marquee class and style that was set to the text
+    titleText.className = '';
+    titleText.style = '';
   }
 };
