@@ -30,6 +30,7 @@
 .marquee-rtl {
   /* 20s duration of animation: +100% -> -100%; */
   animation: left-marquee 20s linear 0s infinite;
+  -webkit-animation: left-marquee 20s linear 0s infinite;
 }
 
 @keyframes left-marquee {
