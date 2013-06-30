@@ -114,7 +114,9 @@ var Marquee = {
           titleText.style.width = width + 'px';
 
           // Start the marquee animation (aligned left with delay)
-          titleText.classList.add(cssClass + timing);
+          setTimeout(function() {
+            titleText.classList.add(cssClass + timing);
+          });
           break;
       }
     } else {
@@ -138,6 +140,6 @@ var Marquee = {
     var titleText = document.getElementById('marquee-h-text');
     // Clear any marquee class and style that was set to the text
     titleText.className = '';
-    titleText.style = '';
+    titleText.removeAttribute("style");
   }
 };
