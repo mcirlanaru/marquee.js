@@ -3,8 +3,7 @@
   overflow: hidden;
   white-space: nowrap;
   line-height: normal;
-  /* Subtract padding-left and amount of padding desired on the right side */
-  width: calc(100% - 3rem - 2rem);
+  width: inherit;
 }
 
 /* --- Right to left (RTL) marquee styles --- */
