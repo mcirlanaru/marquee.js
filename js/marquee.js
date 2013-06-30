@@ -89,8 +89,7 @@ var Marquee = {
           titleText.classList.add(cssClass + '-start-' + timing);
           this._marqueeCssClassList.push(cssClass + '-start-' + timing);
 
-          var self = this;
-          titleText.addEventListener('animationend', function() {
+          var animationEndSetup = function() {
             titleText.classList.remove(cssClass + '-start-' + timing);
             self._marqueeCssClassList.pop();
             // Correctly calculate the width of the marquee
@@ -100,7 +99,10 @@ var Marquee = {
             // Enable the continuous marquee
             titleText.classList.add(cssClass);
             self._marqueeCssClassList.push(cssClass);
-          });
+          };
+          var self = this;
+          titleText.addEventListener('animationend', animationEndSetup);
+          titleText.addEventListener('webkitAnimationEnd', animationEndSetup);
           break;
         case 'alternate':
           var cssClass = marqueeCssClass + '-alt-';
